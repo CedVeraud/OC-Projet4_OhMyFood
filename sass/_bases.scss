@@ -27,4 +27,11 @@ $text-darkgrey: #353535;
     width:100%;
     overflow: hidden;
   }
+  .homepage, .restaurants {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    overflow: hidden;
+    background-color: $bg-lightgrey;
+  }
   

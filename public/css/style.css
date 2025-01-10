@@ -19,6 +19,14 @@ body {
   overflow: hidden;
 }
 
+.homepage, .restaurants {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  overflow: hidden;
+  background-color: #f6f6f6;
+}
+
 /*** HEADER ***/
 .header {
   display: flex;
@@ -54,14 +62,6 @@ body {
 }
 
 /*** HOMEPAGE ***/
-.homepage, .restaurants {
-  width: 100%;
-  box-sizing: border-box;
-  margin: 0;
-  overflow: hidden;
-  background-color: #f6f6f6;
-}
-
 .section1 {
   background: #9356DC;
 }
