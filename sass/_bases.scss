@@ -1,0 +1,30 @@
+// variables
+
+$primary-color: #9356DC;
+$secondary-color: #FF79DA;
+$tertiary-color: #99E2D0;
+
+$bg-lightgrey: #f6f6f6;
+$bg-locationgrey: #EAEAEA;
+
+$text-darkgrey: #353535;
+
+
+
+/*** COMMON RULES ***/
+* {
+    font-family: "Roboto", sans-serif;
+  }
+    
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    width:100%;
+    overflow: hidden;
+  }
+  
