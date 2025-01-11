@@ -17,7 +17,7 @@
 <body>
     <div class="homepage">
 
-        <section id="header">
+        <div id="header">
             <header class="header header__logo">
                 <a href="#"><img class="header__logo--img" src="./public/images/logo/ohmyfood@2x.svg" alt="Ohmyfood"></a>
             </header>
@@ -26,15 +26,27 @@
                 <i class="location__icon fa-solid fa-location-dot"></i>
                 <p class="location__city">Paris, Belleville</p>
             </div>
-        </section>
+        </div>
 
         <main>
-            <section class="section1">
-                <h1>Titre</h1>
+            <section id="presentation" class="presentation">
+                <div class="intro">
+                    <h1 class="intro__title">Réservez le menu qui vous convient</h1>
+                    <p class="intro__baseline">Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
+                    <a class="intro__button" href="#restaurants">Explorer nos restaurants</a>
+                </div>
+                <div class="HowItWorks">
+                    <h2 class="HowItWorks__title">Fonctionnement</h2>
+                    <ol class="HowItWorks__list">
+                        <li><i class="fa-solid fa-mobile-screen-button"></i><span class="function__list__text">Choisissez un restaurant</span></li>
+                        <li><i class="fa-solid fa-list-ul"></i><span class="function__list__text">Composez votre menu</span></li>
+                        <li><i class="fa-highlight fa-solid fa-store"></i><span class="function__list__text">Dégustez au restaurant</span></li>
+                    </ol>
+                </div>
             </section>
 
-            <section class="section2">
-                <h2>Sous-titre</h2>
+            <section id="restaurants" class="restaurants">
+                <h2>Restaurants</h2>
             </section>
         </main>
 
