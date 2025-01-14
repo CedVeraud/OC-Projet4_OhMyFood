@@ -1,7 +1,46 @@
 /*** FOOTER ***/
 
-footer{
-    width: 100%;
-    height:30px;
-    background: $tertiary-color;
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: $bg-darkgrey;
+    color: white;
+    padding: 10px 25px;
+    font-size: 15px;
+    
+    &__title {
+        padding: 0;
+        font-family: 'Shrikhand', sans-serif;
+        font-size: 18px;
+        font-weight: 200;
+    }
+    &__list {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+
+        li {
+            padding: 4px 0;
+        }
+
+        i {
+            padding-right: 10px;
+            font-size: 12px;
+            + a {
+                font-weight: 500;
+            }
+        }
+
+        a {
+            color: white;
+            border-bottom: 1px solid $bg-darkgrey;
+            transition: all .7s;
+
+            &:hover  {
+                color: $bg-locationgrey;
+                border-bottom: 1px solid white;
+                transition: all .7s;
+            }
+        }
+    }
 }
