@@ -4,19 +4,45 @@
     display: flex;
     justify-content: center;
     background-color: white;
-    box-shadow: 0px 0px 5px 1.5px rgba(0,0,0,0.3);
-    
+    box-shadow: 0px 0px 5px 1.5px rgba(0,0,0,0.3);    
     z-index: 2;
 
-    &__logo {
-        position:relative;
-        padding: 20px 0 10px;
+    @include respond-to('desktop') {
+       box-shadow: none;
+    }
 
-        &--img {
+    &__nav {        
+        padding: 0 20px;
+
+        &--back{
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            left: 0;
+            width: 60px;
+            height: 63px;
+            color: $bg-darkgrey;
+
+            i{
+                font-size: 22px;
+                font-weight: 700;
+            }
+
+            &:hover{
+                color: black;
+
+            }
+
+        }
+
+        &--logo {       
+            padding: 20px 0 10px;
             width: 162px;
         }
     }
 }
+
 .location {
     display: flex;
     justify-content: center;
@@ -27,6 +53,10 @@
     text-align: center;
     color: $bg-darkgrey;
     box-shadow: 0px 0px 7px 3px rgba(0,0,0,0.3);
+
+    @include respond-to('desktop') {
+       box-shadow: none;
+    }
 
     &__icon {
         padding: 18px 15px 18px 0;

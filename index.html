@@ -19,8 +19,11 @@
 
         <!-- HEADER -->
         <div id="header">
-            <header class="header header__logo">
-                <a href="#"><img class="header__logo--img" src="./public/images/logo/ohmyfood@2x.svg" alt="Ohmyfood"></a>
+            <header class="header">
+                <nav class="header__nav">
+                <a href="#" class="header__nav--back"><i class="fa-solid fa-arrow-left"></i></a>
+                <a href="#"><img class="header__nav--logo" src="./public/images/logo/ohmyfood@2x.svg" alt="Ohmyfood"></a>
+                </nav>
             </header>
 
             <div class="location">
@@ -38,17 +41,19 @@
                     <a class="intro__button" href="#restaurants">Explorer nos restaurants</a>
                 </div>
                 <div class="HowItWorks">
+                    <div class="page-container">
                     <h2 class="HowItWorks__title">Fonctionnement</h2>
-                    <ol class="HowItWorks__list">
-                        <li><i class="fa-solid fa-mobile-screen-button"></i><span class="function__list__text">Choisissez un restaurant</span></li>
-                        <li><i class="fa-solid fa-list-ul"></i><span class="function__list__text">Composez votre menu</span></li>
-                        <li><i class="fa-highlight fa-solid fa-store"></i><span class="function__list__text">Dégustez au restaurant</span></li>
-                    </ol>
+                        <ol class="HowItWorks__list">
+                            <li><i class="fa-solid fa-mobile-screen-button"></i><span class="function__list__text">Choisissez un restaurant</span></li>
+                            <li><i class="fa-solid fa-list-ul"></i><span class="function__list__text">Composez votre menu</span></li>
+                            <li><i class="fa-highlight fa-solid fa-store"></i><span class="function__list__text">Dégustez au restaurant</span></li>
+                        </ol>
+                    </div>
                 </div>
             </section>
 
             <!-- RESTAURANTS -->
-            <section id="restaurants">                
+            <section id="restaurants" class="page-container">                
                 <h2 class="restaurants__title">Restaurants</h2>
                 <div class="restaurants">
 

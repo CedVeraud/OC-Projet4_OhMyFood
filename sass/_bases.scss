@@ -10,8 +10,29 @@ $bg-darkgrey: #353535;
 
 $text-green: #008766;
 
-// Mixin
-//// CTA
+//// Breakpoints
+$breakpoints: (
+  'phone': 320px,
+  'largephone': 600px,
+  'pad': 767px,
+  'desktop': 1024px,
+  'widescreen': 1400px
+) !default;
+
+
+// MIXIN
+//// Breakpoints
+@mixin respond-to($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+}
+
+//// CtA
 @mixin primary-button {  
     width: auto;
     padding: 15px 20px;
@@ -23,16 +44,18 @@ $text-green: #008766;
     text-decoration: none;
     box-shadow: 0px 2px 10px 1.2px rgba(0,0,0,0.3);
     cursor: pointer;
+    transform: scale(1);
     transition: all 0.5s ease-in-out;
 
     &:hover{
         box-shadow: 0px 2px 12px 1.5px rgba(0,0,0,0.35);
         filter: brightness(110%);
+        transform: scale(1.005);
         transition: all 0.5s ease-in-out;
     }
 }
 
-//// FAVORITE HEART ICON
+//// Favorite heart icon
 @mixin favorite-heart{
       font-size: 22px;
       padding: 20px;
@@ -41,7 +64,8 @@ $text-green: #008766;
         display:none;
       }
       
-      &__icon--outlines, &__icon--solid{
+      &__icon--outlines, 
+      &__icon--solid{
         position: absolute;  
       }
 
@@ -52,6 +76,7 @@ $text-green: #008766;
         transition: all .7s;
 
           &:hover{
+            cursor: pointer;
             opacity: 1;
             transition: all .7s;
           }
@@ -60,16 +85,21 @@ $text-green: #008766;
       &__icon--solid{
         color: $primary-color;
         opacity: 0;
-        font-size: 40px;
-        margin: -8px;
+        font-size: 36px;
+        margin: -7px;
         transition: all 1s;
+
+        &:hover{
+          cursor: pointer;
+        }
       }
       
       input:checked + label.favorite__icon .favorite__icon--solid{        
         opacity: 1;
         font-size: 20px;
         margin: 1px;
-        transition: all .4s ease 0.15s;
+        transition: all .4s ease-in-out;
+        transition: opacity .6s ease-out;
         background-image: linear-gradient(180deg, $primary-color 0%, $secondary-color 110%);
         background-clip: text;
         color: rgba(147, 86, 220, 0.25);
@@ -94,17 +124,23 @@ $text-green: #008766;
   
   body {
     display: flex;
-    justify-content: center;
+    justify-content: center;    
+    width: 100%;
     margin: 0;
-    width:100%;
   }
 
   .homepage, .restaurantpage {
     width: 100%;
     margin: 0;
     box-sizing: border-box;
-    overflow: hidden;
     background-color: $bg-lightgrey;
+    overflow: hidden;
+  }
+  .page-container{
+    @include respond-to('widescreen') {
+      max-width: 1350px;
+      margin: 0 auto;
+    }
   }
 
   h1, 
