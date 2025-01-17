@@ -1,0 +1,27 @@
+
+/* Import Roboto + ShrikHand */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
+
+/***  FONT RULES  ***/
+*{
+    font-family: "Roboto", sans-serif;
+}
+
+h1, 
+h2{
+  font-size: 24px;
+  font-weight: 700;
+}
+
+h3{
+  font-size: 18px;
+  font-weight: 700;
+}
+
+a{
+  text-decoration: none;
+}
+
+p{
+  font-weight: 300;
+}

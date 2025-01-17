@@ -1,6 +1,12 @@
-@import "../../sass/init.scss";
-@import "../../sass/_bases.scss";
-@import "../../sass/_header.scss";
-@import "../../sass/_homepage.scss";
-@import "../../sass/_footer.scss";
+@import "../../sass/init";
+
+@import "../../sass/utils/variables";
+@import "../../sass/utils/mixin";
+@import "../../sass/base/typography";
+@import "../../sass/base/normalize";
+
+@import "../../sass/layout/header";
+@import "../../sass/pages/homepage";
+@import "../../sass/pages/restaurantpage";
+@import "../../sass/layout/footer";
 

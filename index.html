@@ -5,9 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ohmyfood</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
@@ -18,21 +15,23 @@
     <div class="homepage">
 
         <!-- HEADER -->
-        <div id="header">
-            <header class="header">
+        <header id="header">
+            <div class="header">
                 <nav class="header__nav">
                 <a href="#" class="header__nav--back"><i class="fa-solid fa-arrow-left"></i></a>
                 <a href="#"><img class="header__nav--logo" src="./public/images/logo/ohmyfood@2x.svg" alt="Ohmyfood"></a>
                 </nav>
-            </header>
+            </div>            
+        </header>
 
+        <main>  
+            
+            <!--LOCATION-->            
             <div class="location">
                 <i class="location__icon fa-solid fa-location-dot"></i>
                 <p class="location__city">Paris, Belleville</p>
             </div>
-        </div>
 
-        <main>            
             <!-- INTRO -->
             <section id="presentation" class="presentation">
                 <div class="intro">
@@ -59,96 +58,94 @@
 
                     <div class="card-wrap">
                         <article class="card-container">
-                            <a href="#" class="card">
-                                <div class="card__new"><span>Nouveau</span></div>
-                                <img src="./public/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Photo d'une assiette prête à déguster sur une belle table dressée">
+                            <a href="./restaurants/la-palette-du-gout.html" class="card">
+                                <div class="card__bg card__bg--la-palette-du-gout">
+                                     <div class="card__new"><span>Nouveau</span></div>
+                                </div>
                                 <div class="card__content">
                                     <div class="infos">
                                         <h3 class="name">La palette du goût</h3>
                                         <p class="city">Ménilmontant</p>
-                                    </div>
-                                
-                                </div>
-                                
+                                    </div>                                
+                                </div>                                
                             </a>
+                            
+                            <div class="favorite">
+                                <input type="checkbox" id="la-palette-du-gout" name="favorite" value="favorite">
+                                <label for="la-palette-du-gout" class="favorite__icon">
+                                    <i class="favorite__icon--outlines fa-regular fa-heart" aria-hidden="true"></i>
+                                    <i class="favorite__icon--solid fa-solid fa-heart" aria-hidden="true"></i>
+                                </label>
+                            </div>
                         </article>
-                        <div class="favorite">
-                            <input type="checkbox" id="la-palette-du-gout" name="favorite" value="favorite">
-                            <label for="la-palette-du-gout" class="favorite__icon">
-                                <i class="favorite__icon--outlines fa-regular fa-heart" aria-hidden="true"></i>
-                                <i class="favorite__icon--solid fa-solid fa-heart" aria-hidden="true"></i>
-                            </label>
-                        </div>
                     </div>
 
                     <div class="card-wrap">
                         <article class="card-container">
-                            <a href="#" class="card">
-                                <div class="card__new"><span>Nouveau</span></div>
-                                <img src="./public/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Photo d'une assiette bien pleine prise du dessus">
+                            <a href="./restaurants/la-palette-du-gout.html" class="card">
+                                <div class="card__bg card__bg--la-note-enchantee">
+                                    <div class="card__new"><span>Nouveau</span></div>
+                                </div>
                                 <div class="card__content">
                                     <div class="infos">
                                         <h3 class="name">La note enchantée</h3>
                                         <p class="city">Charonne</p>
-                                    </div>
-                                
-                                </div>
-                                
+                                    </div>                                
+                                </div>                                
                             </a>
+                            
+                            <div class="favorite">
+                                <input type="checkbox" id="la-note-enchantee" name="favorite" value="favorite">
+                                <label for="la-note-enchantee" class="favorite__icon">
+                                    <i class="favorite__icon--outlines fa-regular fa-heart" aria-hidden="true"></i>
+                                    <i class="favorite__icon--solid fa-solid fa-heart" aria-hidden="true"></i>
+                                </label>
+                            </div>
                         </article>
-                        <div class="favorite">
-                            <input type="checkbox" id="la-note-enchantee" name="favorite" value="favorite">
-                            <label for="la-note-enchantee" class="favorite__icon">
-                                <i class="favorite__icon--outlines fa-regular fa-heart" aria-hidden="true"></i>
-                                <i class="favorite__icon--solid fa-solid fa-heart" aria-hidden="true"></i>
-                            </label>
-                        </div>
                     </div>
 
                     <div class="card-wrap">
                         <article class="card-container">
-                            <a href="#" class="card">
-                                <img src="./public/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Photo de plusieurs assiettes prêtes à déguster">
+                            <a href="./restaurants/la-palette-du-gout.html" class="card">
+                                <div class="card__bg card__bg--a-la-francaise"></div>
                                 <div class="card__content">
                                     <div class="infos">
                                         <h3 class="name">À la française</h3>
                                         <p class="city">Cité rouge</p>
-                                    </div>
-                                
-                                </div>
-                                
+                                    </div>                                
+                                </div>                                
                             </a>
+
+                            <div class="favorite">
+                                <input type="checkbox" id="a-la-francaise" name="favorite" value="favorite">
+                                <label for="a-la-francaise" class="favorite__icon">
+                                    <i class="favorite__icon--outlines fa-regular fa-heart" aria-hidden="true"></i>
+                                    <i class="favorite__icon--solid fa-solid fa-heart" aria-hidden="true"></i>
+                                </label>
+                            </div>
                         </article>
-                        <div class="favorite">
-                            <input type="checkbox" id="a-la-francaise" name="favorite" value="favorite">
-                            <label for="a-la-francaise" class="favorite__icon">
-                                <i class="favorite__icon--outlines fa-regular fa-heart" aria-hidden="true"></i>
-                                <i class="favorite__icon--solid fa-solid fa-heart" aria-hidden="true"></i>
-                            </label>
-                        </div>
                     </div>
 
                     <div class="card-wrap">
                         <article class="card-container">
-                            <a href="#" class="card">
-                                <img src="./public/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Image de plusieurs assiettes de formes allongées pleines plats cuisinés">
+                            <a href="./restaurants/la-palette-du-gout.html" class="card">
+                                <div class="card__bg card__bg--le-delice-des-sens"></div>
                                 <div class="card__content">
                                     <div class="infos">
                                         <h3 class="name">Le délice des sens</h3>
                                         <p class="city">Folie-Méricourt</p>
-                                    </div>
-                                
-                                </div>
-                                
+                                    </div>                                
+                                </div>                                
                             </a>
+
+                            <div class="favorite">
+                                <input type="checkbox" id="le-delice-des-sens" name="favorite" value="favorite">
+                                <label for="le-delice-des-sens" class="favorite__icon">
+                                    <i class="favorite__icon--outlines fa-regular fa-heart" aria-hidden="true"></i>
+                                    <i class="favorite__icon--solid fa-solid fa-heart" aria-hidden="true"></i>
+                                </label>
+                            </div>
                         </article>
-                        <div class="favorite">
-                            <input type="checkbox" id="le-delice-des-sens" name="favorite" value="favorite">
-                            <label for="le-delice-des-sens" class="favorite__icon">
-                                <i class="favorite__icon--outlines fa-regular fa-heart" aria-hidden="true"></i>
-                                <i class="favorite__icon--solid fa-solid fa-heart" aria-hidden="true"></i>
-                            </label>
-                        </div>
                     </div>
 
                 </div>

@@ -1,0 +1,21 @@
+// VAR
+
+//// colors
+$primary-color: #9356DC;
+$secondary-color: #FF79DA;
+$tertiary-color: #99E2D0;
+
+$bg-lightgrey: #f6f6f6;
+$bg-locationgrey: #EAEAEA;
+$bg-darkgrey: #353535;
+
+$text-green: #008766;
+
+//// Breakpoints
+$breakpoints: (
+  'phone': 320px,
+  'largephone': 600px,
+  'pad': 767px,
+  'desktop': 1024px,
+  'widescreen': 1400px
+) !default;

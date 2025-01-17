@@ -1,0 +1,58 @@
+/*** RESTAURANT PAGE ***/
+.restaurantpage { 
+  
+  background: white;
+    .header__nav--back{
+      display: flex;
+  }
+
+  .page-container{      
+    background-color: $bg-lightgrey;
+    padding: 0 25px;
+      
+    @include respond-to('widescreen') {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+  }    
+}
+
+.picture{ 
+
+    &__bg{
+      width: 100%; 
+      padding-top: 280px; 
+      @include restaurant-picture;
+    } 
+
+    .page-top{            
+    background-color: $bg-lightgrey;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    padding: 0 25px;
+    height: 40px;  
+
+      @include respond-to('widescreen') {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+    }
+}
+
+.page__intro{
+
+    &--title{
+      font-family: "Shrikhand", sans-serif;
+      font-size: 28px;
+      font-weight: 100;
+      margin: 0;
+    }
+
+            
+    .favorite{
+      position: relative;
+      margin-top: 0;
+      margin-left: calc(100% - 60px);
+      @include favorite-heart;
+    }    
+}

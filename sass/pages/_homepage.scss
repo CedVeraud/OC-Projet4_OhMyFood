@@ -1,28 +1,39 @@
 /*** HOMEPAGE ***/
  .homepage {
     
+    background-color: $bg-lightgrey;
+
     .header__nav--back{
       display: none;
     }
-    .location{
-        display: static;
-    }
 } 
-/*** RESTAURANT PAGE ***/
-/* .restaurantpage {
-    
-    .header__nav--back{
-      display: static;
-    }
-    .location{
-        display: none;
-    }
-} 
-*/
 
-.presentation{
-    background-color: $bg-lightgrey;
+/* LOCATION */
+.location {
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    position: relative;
+    z-index: 1;
+    background-color: $bg-locationgrey;
+    text-align: center;
+    color: $bg-darkgrey;
+    box-shadow: 0px 0px 7px 3px rgba(0,0,0,0.3);
+
+    @include respond-to('desktop') {
+       box-shadow: none;
+    }
+
+    &__icon {
+        padding: 18px 15px 18px 0;
+        font-size: 16px;
+    }
+    &__city {
+        font-size: 16px;
+        font-weight: 700;
+    }
 }
+
 
 /*  INTRO  */
 .intro{    
@@ -51,19 +62,19 @@
 
 /* FONCTIONNEMENT */
 .HowItWorks{
-    padding: 35px 10px 35px 20px;
+    padding: 35px 0 35px;
     text-align: left;
     background-color: white;    
 
     &__title{
-        margin: 15px 0 5px;
+        margin: 15px 20px 5px;
     }
     &__list {  
         display: flex;
         justify-content: center;
         flex-flow: column;      
         margin: 0;
-        padding: 0 10px;
+        padding: 0 20px 0 30px;
         list-style: none; 
         font-size: 16px;
         font-weight: 500;
@@ -76,7 +87,7 @@
             margin: 0 auto;
             
             li{
-            width: 26%;
+            width: 28%;
             }
         }
         
@@ -123,70 +134,67 @@
     display: flex;
     flex-flow: wrap;
     justify-content: space-between;
-    padding: 0 15px 50px;
+    padding: 0 15px 35px;
 
     &__title{
-        margin: 50px 20px 5px;
+        margin: 50px 20px 10px;
     }
 
     .card-wrap{
         width: 100%; 
-        margin: 15px auto 35px; 
+        height: 250px;
+        margin: 10px auto; 
 
         @include respond-to('pad') {
             width: 48%;
         }
         
         .card-container{
-            margin-top: 0;
             width: 100%;
-            
-            
-            .card{
+            margin: 0;
+
+            .card{   
                 display: flex;
                 flex-direction: column;
-                background-color: white;
+                justify-content: space-between; 
                 border-radius: 15px; 
+                background-color: white;
                 box-shadow: 0px 0px 6px 0px rgba(200, 200, 200, 0.1);
                 
+                &__bg{  
+                    height: 175px;                   
+                    border-top-left-radius: 15px;
+                    border-top-right-radius: 15px;           
+                    @include restaurant-picture;
+                }
+
                 &__new{
-                    position: absolute;
+                    width: 80px;
                     margin-top: 15px;
-                    margin-left: calc(100% - 125px);
+                    margin-left: calc(100% - 120px);
                     padding: 6px 13px;
                     background-color: $tertiary-color;
                     color: $text-green;
                     font-size: 14px;
                     font-weight: 500;
+                    text-align: center;
                     border-radius: 2px;
                     box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
-                    
-                    @include respond-to('pad') {
-                        margin-left: calc(48% - 120px);
-                    }
-                    @include respond-to('widescreen') {
-                        margin-left: 530px;
-                    }
-                }
-    
-
-                img {
-                    height: 175px;
-                    border-top-left-radius: 15px;
-                    border-top-right-radius: 15px;
-                    object-fit: cover;
-                }     
+                }                  
 
                 &__content {
                     display: flex;
                     flex-flow: row;
                     justify-content: space-between;
-                    padding-left: 15px;
+                    padding-left: 15px;                    
+                    border-bottom-left-radius: 15px;
+                    border-bottom-right-radius: 15px; 
+                    background-color: white;
                     color: black;
                     
                     .infos{
                         display: block;
-                        margin: 20px 0;
+                        margin: 15px 0;
                     }
                     .name {
                         line-height: 26px;
@@ -201,14 +209,23 @@
                        
             }
             
-        }     
+        } 
     } 
     
 }
 
 
+.homepage .page-container{
+    @include respond-to('widescreen') {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 25px;
+    }
+  }
+        
 .homepage .favorite{
-    margin-top: -75px;
-    margin-left: calc(100% - 70px);
+    position:relative;
+    margin-top: -50px;
+    margin-left: calc(100% - 60px);
     @include favorite-heart;
-}
+}    
