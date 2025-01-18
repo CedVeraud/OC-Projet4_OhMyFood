@@ -10,7 +10,7 @@
     background-color: $bg-lightgrey;
     padding: 0 25px;
       
-    @include respond-to('widescreen') {
+    @include respond-to('desktop') {
       max-width: 1000px;
       margin: 0 auto;
     }
@@ -21,8 +21,12 @@
 
     &__bg{
       width: 100%; 
-      padding-top: 280px; 
-      @include restaurant-picture;
+      padding-top: 222px; 
+      @include restaurant-picture; 
+
+      @include respond-to('desktop') {
+        padding-top: 380px;
+      }
     } 
 
     .page-top{            
@@ -32,7 +36,7 @@
     padding: 0 25px;
     height: 40px;  
 
-      @include respond-to('widescreen') {
+      @include respond-to('desktop') {
         max-width: 1000px;
         margin: 0 auto;
       }
@@ -40,6 +44,15 @@
 }
 
 .page__intro{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    
+    @include respond-to('pad') {
+      max-width: 634px;
+      justify-content: center;
+      margin: 0 auto;
+    }
 
     &--title{
       font-family: "Shrikhand", sans-serif;
@@ -47,12 +60,45 @@
       font-weight: 100;
       margin: 0;
     }
-
             
     .favorite{
       position: relative;
-      margin-top: 0;
-      margin-left: calc(100% - 60px);
+      margin: 10px 40px 10px 20px;
       @include favorite-heart;
     }    
+}
+
+.menus{
+  padding-bottom: 50px;
+  
+  @include respond-to('pad') {
+    max-width: 634px;
+    margin: 0 auto;
+  }
+
+  &__choices{
+    display: flex;
+    flex-flow: column nowrap;
+  }
+ 
+  &__button{
+    @include primary-button;        
+    margin: 50px auto 20px;
+    border: none;
+    cursor: pointer;
+  }
+
+  h3{
+    text-transform: uppercase;
+    font-weight: 300;
+    margin: 20px 0 0;
+  }
+
+  hr{
+    width: 40px;
+    height: 3px;
+    margin-left: 0;
+    border: none;
+    background: $tertiary-color;
+  }
 }
