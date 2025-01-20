@@ -8,7 +8,7 @@
 
   .page-container{      
     background-color: $bg-lightgrey;
-    padding: 0 25px;
+    padding: 0 15px;
       
     @include respond-to('desktop') {
       max-width: 1000px;
@@ -33,7 +33,7 @@
     background-color: $bg-lightgrey;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
-    padding: 0 25px;
+    padding: 0 15px;
     height: 40px;  
 
       @include respond-to('desktop') {
@@ -58,12 +58,13 @@
       font-family: "Shrikhand", sans-serif;
       font-size: 28px;
       font-weight: 100;
-      margin: 0;
+      line-height: 24px;
+      margin: 0 0 15px;
     }
             
     .favorite{
       position: relative;
-      margin: 10px 40px 10px 20px;
+      margin: 0 40px 0 20px;
       @include favorite-heart;
     }    
 }
@@ -79,26 +80,123 @@
   &__choices{
     display: flex;
     flex-flow: column nowrap;
-  }
- 
-  &__button{
-    @include primary-button;        
-    margin: 50px auto 20px;
-    border: none;
-    cursor: pointer;
-  }
+  
+    &--title{
+      text-transform: uppercase;
+      font-size: 16px;
+      font-weight: 300;
+      margin: 20px 0 0;
+    } 
+    hr{
+      width: 40px;
+      height: 3px;
+      margin: 5px 0;
+      border: none;
+      background: $tertiary-color;
+    }
 
-  h3{
-    text-transform: uppercase;
-    font-weight: 300;
-    margin: 20px 0 0;
-  }
+   
+    &--content{
+          margin: 10px 0;
 
-  hr{
-    width: 40px;
-    height: 3px;
-    margin-left: 0;
-    border: none;
-    background: $tertiary-color;
+        .service{
+          width: 100%;
+          border-radius: 15px;
+          background-color: white;
+          box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.1);
+          margin-bottom: 10px;
+
+          overflow: hidden;
+      
+            .menu__input {
+              opacity: 0;
+              position: absolute;
+              width: calc(100% - 30px);
+              max-width: 634px;
+              height: 69px;
+              cursor: pointer;
+            }
+            .details{
+              display: flex;
+              flex-flow: row nowrap;
+              justify-content: space-between;
+            }
+            .menu__infos{
+              padding: 12px 15px;
+              overflow: hidden;
+
+              &--plat, &--special{
+                margin: 2px 0;  
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+              }
+            }
+            .menu__box{ 
+              display: flex;
+              flex-direction: row;
+              margin-right: -60px;
+              background-color: white;
+              transition: all .5s;
+
+              &--price{
+                display: flex;
+                flex-direction: column;
+                justify-content: end;
+                margin: 10px 0 15px;
+              }
+
+              &--checked{                
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 60px;
+                margin-left: 15px;
+                background-color: $tertiary-color;
+                font-size: 16px;
+                font-weight: 100;
+              }
+
+              &--icon{
+                background: white;
+                color: $tertiary-color;
+                border-radius: 50%;
+                padding:3px;    
+                transition: all .05s;
+              }
+            }
+
+            .menu__input:hover ~ .details .menu__box{
+              margin-right: 0;
+              transition: all .5s;
+              
+              &--icon{
+                transform: rotate(360deg);                
+                transition: all .5s;
+              }
+            }
+
+            .menu__input:checked ~ .details .menu__box{
+              margin-right: 0;
+              transition: all .5s;
+              
+              &--icon{
+                color: $text-green;
+                transform: scale(1.01);     
+                transition: all .05s;
+                border: 2px solid $text-green;
+              }
+            }
+          }
+      } 
+    }
+    
+    &__button{
+      @include primary-button;        
+      margin: 50px auto 20px;
+      border: none;
+      cursor: pointer;
+    }
   }
-}
+  

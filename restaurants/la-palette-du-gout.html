@@ -26,7 +26,7 @@
 
         <main>
             <div class="picture picture__bg picture__bg--la-palette-du-gout">  
-            <div class="page-top"></div>
+                <div class="page-top"></div>
             </div>
                 <div class="page-container">
                     <section class="page__intro">
@@ -38,31 +38,165 @@
                                 <i class="favorite__icon--solid fa-solid fa-heart" aria-hidden="true"></i>
                             </label>
                         </div>
-
                     </section>
 
                     <section class="menus">
                         
                         <form class="menus__choices">
-                            <h3>Entrées</h3><hr>
-                            <ul>
-                                <li>entrée 1</li>
-                                <li>entrée 2</li>
-                                <li>entrée 3</li>
+                            <h2 class="menus__choices--title">Entrées</h2><hr>
+                            <ul class="menus__choices--content">
+                               
+                                <li class="service">
+                                    <input type="radio" id="escargots" name="entree" class="menu__input" value="25">
+                                    <div class="details">
+                                        <div class="menu__infos"  >                         
+                                            <h3 class="menu__infos--plat">Fricassée d'escargots</h3>
+                                            <p  class="menu__infos--special">Au piment d'Espelette</p>
+                                        </div>
+                                        
+                                        <div class="menu__box">
+                                            <span class="menu__box--price">25€</span>
+                                            <span class="menu__box--checked"><i class="menu__box--icon fa-solid fa-check"></i></span>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="service">
+                                    <input type="radio" id="foie-gras" name="entree" class="menu__input" value="35">
+                                    <div class="details">
+                                        <div class="menu__infos"  >                         
+                                            <h3 class="menu__infos--plat">Foie gras de canard mi-cuit</h3>
+                                            <p  class="menu__infos--special">Et ses copeaux de truffe noire</p>
+                                        </div>
+                                        
+                                        <div class="menu__box">
+                                            <span class="menu__box--price">35€</span>
+                                            <span class="menu__box--checked"><i class="menu__box--icon fa-solid fa-check"></i></span>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="service">
+                                    <input type="radio" id="oeuf-au-plat" name="entree" class="menu__input" value="20">
+                                    <div class="details">
+                                        <div class="menu__infos"  >                         
+                                            <h3 class="menu__infos--plat">Œuf au plat</h3>
+                                            <p class="menu__infos--special">Assaisonné à la truffe sur lit de caviar</p>
+                                        </div>
+                                        
+                                        <div class="menu__box">
+                                            <span class="menu__box--price">20€</span>
+                                            <span class="menu__box--checked"><i class="menu__box--icon fa-solid fa-check"></i></span>
+                                        </div>
+                                    </div>
+                                </li>
+                            
+                            </ul>                            
+    
+                            
+                            <h2 class="menus__choices--title">Plats</h2><hr>
+                            <ul class="menus__choices--content">
+                               
+                                <li class="service">
+                                    <input type="radio" id="filet-boeuf" name="plat" class="menu__input" value="40">
+                                    <div class="details">
+                                        <div class="menu__infos">                         
+                                            <h3 class="menu__infos--plat">Filet de bœuf aux herbes</h3>
+                                            <p class="menu__infos--special">Accompagné de sa ribambelle de légumes</p>
+                                        </div>
+                                        
+                                        <div class="menu__box">
+                                            <span class="menu__box--price">40€</span>
+                                            <span class="menu__box--checked"><i class="menu__box--icon fa-solid fa-check"></i></span>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="service">
+                                    <input type="radio" id="parmentier" name="plat" class="menu__input" value="35">
+                                    <div class="details">
+                                        <div class="menu__infos">                         
+                                            <h3 class="menu__infos--plat">Parmentier de queue de bœuf</h3>
+                                            <p class="menu__infos--special">À la truffe noire sur sa purée de panais</p>
+                                        </div>
+                                        
+                                        <div class="menu__box">
+                                            <span class="menu__box--price">35€</span>
+                                            <span class="menu__box--checked"><i class="menu__box--icon fa-solid fa-check"></i></span>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="service">
+                                    <input type="radio" id="turbot" name="plat" class="menu__input" value="44">
+                                    <div class="details">
+                                        <div class="menu__infos">                         
+                                            <h3 class="menu__infos--plat">Filet de turbot</h3>
+                                            <p class="menu__infos--special">Aux agrumes</p>
+                                        </div>
+                                        
+                                        <div class="menu__box">
+                                            <span class="menu__box--price">44€</span>
+                                            <span class="menu__box--checked"><i class="menu__box--icon fa-solid fa-check"></i></span>
+                                        </div>
+                                    </div>
+                                </li>
 
                             </ul>
-                            <h3>Plats</h3><hr>
-                            <ul>
-                                <li>plat 1</li>
-                                <li>plat 2</li>
-                                <li>plat 3</li>
+                           
+
+                            
+                            <h2 class="menus__choices--title">Desserts</h2><hr>
+                            <ul class="menus__choices--content">
+
+                                <li class="service">
+                                    <input type="radio" id="paris-brest" name="dessert" class="menu__input" value="18">
+                                    <div class="details">
+                                        <div class="menu__infos">                         
+                                            <h3 class="menu__infos--plat">Paris-Brest</h3>
+                                            <p class="menu__infos--special">Revisité</p>
+                                        </div>
+                                        
+                                        <div class="menu__box">
+                                            <span class="menu__box--price">18€</span>
+                                            <span class="menu__box--checked"><i class="menu__box--icon fa-solid fa-check"></i></span>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="service">
+                                    <input type="radio" id="macaron" name="dessert" class="menu__input" value="22">
+                                    <div class="details">
+                                        <div class="menu__infos">                         
+                                            <h3 class="menu__infos--plat">Macaron au chocolat d'exception</h3>
+                                            <p class="menu__infos--special">Et glace à la vanille de Madagascar</p>
+                                        </div>
+                                        
+                                        <div class="menu__box">
+                                            <span class="menu__box--price">22€</span>
+                                            <span class="menu__box--checked"><i class="menu__box--icon fa-solid fa-check"></i></span>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="service">
+                                    <input type="radio" id="mousse-chocolat" name="dessert" class="menu__input" value="23">
+                                    <div class="details">
+                                        <div class="menu__infos">                         
+                                            <h3 class="menu__infos--plat">Mousse au chocolat</h3>
+                                            <p class="menu__infos--special">Au piment d'Espelette et à la truffe noire</p>
+                                        </div>
+                                        
+                                        <div class="menu__box">
+                                            <span class="menu__box--price">23€</span>
+                                            <span class="menu__box--checked"><i class="menu__box--icon fa-solid fa-check"></i></span>
+                                        </div>
+                                    </div>
+                                </li>
+
                             </ul>
-                            <h3>Desserts</h3><hr>
-                            <ul>
-                                <li>dessert 1</li>
-                                <li>dessert 2</li>
-                                <li>dessert 3</li>
-                            </ul>
+                            
+                            
                             <button class="menus__button">
                                 <span>Commander</span>
                             </button>

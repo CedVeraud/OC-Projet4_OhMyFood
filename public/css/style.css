@@ -38,13 +38,18 @@ body {
   justify-content: center;
   width: 100%;
   margin: 0;
+  box-sizing: border-box;
   overflow-x: hidden;
 }
 
 .homepage, .restaurantpage {
   width: 100%;
   margin: 0;
-  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
 }
 
 /*** HEADER ***/
@@ -83,14 +88,13 @@ body {
 }
 .header__nav--back:hover > i {
   color: #9356DC;
-  margin-left: 3px;
+  margin-left: -5px;
   transition: all 0.3s ease-out;
 }
 .header__nav--back:active > i {
-  margin-left: -300px;
-  font-size: 3em;
+  margin-left: -2000px;
   opacity: 0;
-  transition: all 0.2s ease-in-out;
+  transition: all 0s;
 }
 .header__nav--logo {
   padding: 20px 0 10px;
@@ -401,7 +405,7 @@ body {
 }
 .restaurantpage .page-container {
   background-color: #f6f6f6;
-  padding: 0 25px;
+  padding: 0 15px;
 }
 @media (min-width: 1024px) {
   .restaurantpage .page-container {
@@ -439,7 +443,7 @@ body {
   background-color: #f6f6f6;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
-  padding: 0 25px;
+  padding: 0 15px;
   height: 40px;
 }
 @media (min-width: 1024px) {
@@ -465,11 +469,12 @@ body {
   font-family: "Shrikhand", sans-serif;
   font-size: 28px;
   font-weight: 100;
-  margin: 0;
+  line-height: 24px;
+  margin: 0 0 15px;
 }
 .page__intro .favorite {
   position: relative;
-  margin: 10px 40px 10px 20px;
+  margin: 0 40px 0 20px;
   font-size: 22px;
 }
 .page__intro .favorite > input {
@@ -529,6 +534,102 @@ body {
   display: flex;
   flex-flow: column nowrap;
 }
+.menus__choices--title {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 300;
+  margin: 20px 0 0;
+}
+.menus__choices hr {
+  width: 40px;
+  height: 3px;
+  margin: 5px 0;
+  border: none;
+  background: #99E2D0;
+}
+.menus__choices--content {
+  margin: 10px 0;
+}
+.menus__choices--content .service {
+  width: 100%;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.menus__choices--content .service .menu__input {
+  opacity: 0;
+  position: absolute;
+  width: calc(100% - 30px);
+  max-width: 634px;
+  height: 69px;
+  cursor: pointer;
+}
+.menus__choices--content .service .details {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+.menus__choices--content .service .menu__infos {
+  padding: 12px 15px;
+  overflow: hidden;
+}
+.menus__choices--content .service .menu__infos--plat, .menus__choices--content .service .menu__infos--special {
+  margin: 2px 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.menus__choices--content .service .menu__box {
+  display: flex;
+  flex-direction: row;
+  margin-right: -60px;
+  background-color: white;
+  transition: all 0.5s;
+}
+.menus__choices--content .service .menu__box--price {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  margin: 10px 0 15px;
+}
+.menus__choices--content .service .menu__box--checked {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  margin-left: 15px;
+  background-color: #99E2D0;
+  font-size: 16px;
+  font-weight: 100;
+}
+.menus__choices--content .service .menu__box--icon {
+  background: white;
+  color: #99E2D0;
+  border-radius: 50%;
+  padding: 3px;
+  transition: all 0.05s;
+}
+.menus__choices--content .service .menu__input:hover ~ .details .menu__box {
+  margin-right: 0;
+  transition: all 0.5s;
+}
+.menus__choices--content .service .menu__input:hover ~ .details .menu__box--icon {
+  transform: rotate(360deg);
+  transition: all 0.5s;
+}
+.menus__choices--content .service .menu__input:checked ~ .details .menu__box {
+  margin-right: 0;
+  transition: all 0.5s;
+}
+.menus__choices--content .service .menu__input:checked ~ .details .menu__box--icon {
+  color: #008766;
+  transform: scale(1.01);
+  transition: all 0.05s;
+  border: 2px solid #008766;
+}
 .menus__button {
   width: auto;
   min-width: 190px;
@@ -557,18 +658,6 @@ body {
   filter: brightness(117%);
   transform: scale(1);
   transition: all 0.07s;
-}
-.menus h3 {
-  text-transform: uppercase;
-  font-weight: 300;
-  margin: 20px 0 0;
-}
-.menus hr {
-  width: 40px;
-  height: 3px;
-  margin-left: 0;
-  border: none;
-  background: #99E2D0;
 }
 
 /*** FOOTER ***/
