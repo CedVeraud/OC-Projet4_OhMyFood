@@ -20,6 +20,7 @@
     color: $bg-darkgrey;
     box-shadow: 0px 0px 7px 3px rgba(0,0,0,0.3);
 
+
     @include respond-to('desktop') {
        box-shadow: none;
     }
@@ -31,11 +32,11 @@
     &__city {
         font-size: 17px;
         font-weight: 700;
-        text-align: center;
+        text-align: left;
         color: black;
         border: none;
         background: transparent;
-        max-width: 120px;
+        max-width: 150px;
         transition: opacity .3s ease-in-out;
 
         &::placeholder{
@@ -56,11 +57,12 @@
 
 
 /*  INTRO  */
+
 .intro{    
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: center;
+    text-align: center;    
 
     &__title{
         margin: 0;
@@ -71,7 +73,6 @@
         margin: 10px 0 20px;
         padding: 0 20px;
         font-size: 18px;
-        font-weight: 300;
     }
 
     &__button{
@@ -121,6 +122,7 @@
             border-radius: 20px;
             box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.1);
             counter-increment: li;
+            @include animated_list;  
 
             i {
                 padding: 0 20px;

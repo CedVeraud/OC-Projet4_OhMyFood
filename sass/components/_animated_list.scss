@@ -1,0 +1,37 @@
+@mixin animated_list{
+    &:nth-child(1){
+        animation: animated_list-item 400ms 2600ms ease-out backwards;
+      }
+      &:nth-child(2){
+        animation: animated_list-item 600ms 2700ms ease-in-out backwards;
+      }
+      &:nth-child(3){
+        animation: animated_list-item 800ms 2800ms ease-out backwards;
+      }          
+
+      @keyframes animated_list-item {
+        0% {
+          transform: translateY(20px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+}
+
+@mixin animated_arrow{
+    animation: animated_arrow-item 500ms 3000ms ease-out backwards;
+    
+    @keyframes animated_arrow-item {
+        0% {
+          transform: translateX(30px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+}

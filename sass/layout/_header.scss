@@ -25,6 +25,8 @@
             width: 70px;
             height: 100%;
 
+            @include animated_arrow;
+
             i{
                 font-size: 22px;
                 font-weight: 700;
@@ -34,14 +36,9 @@
             }
 
             &:hover > i{
-                color:  $primary-color;
+                color: black;
                 margin-left: -5px;
                 transition: all 0.3s ease-out;
-            }
-            &:active > i{
-                margin-left: -2000px;
-                opacity: 0;
-                transition: all 0s;
             }
 
         }
