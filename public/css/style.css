@@ -52,7 +52,7 @@ ul {
   width: 100%;
   height: 100%;
   background: rgb(246, 246, 246);
-  animation: loader-container 3600ms 300ms forwards;
+  animation: loader-container 3200ms 600ms forwards;
   /* COOKING */
 }
 .loader__head {
@@ -61,7 +61,7 @@ ul {
   background: white url("../images/logo/ohmyfood@2x.svg") center 20px no-repeat;
   background-size: 162px;
   opacity: 1;
-  animation: loader-head-fadeout 3200ms ease-in-out forwards;
+  animation: loader-head-fadeout 3400ms ease-in-out forwards;
 }
 @media (min-width: 767px) {
   .loader__head {
@@ -96,7 +96,7 @@ ul {
 }
 .loader__cooking {
   position: absolute;
-  top: 50px;
+  top: 60px;
   left: calc(50% - 188px);
   width: 322px;
   height: 200px;
@@ -183,15 +183,15 @@ ul {
   0% {
     opacity: 0;
   }
-  20% {
+  33% {
     filter: blur(5px);
     opacity: 0;
   }
-  25% {
+  56% {
     filter: blur(4px);
     opacity: 0.1;
   }
-  60% {
+  65% {
     filter: blur(2.5px);
     opacity: 0.4;
   }
