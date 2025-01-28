@@ -29,8 +29,6 @@ html {
 }
 
 body {
-  display: flex;
-  justify-content: center;
   width: 100%;
   margin: 0;
   box-sizing: border-box;
@@ -54,15 +52,16 @@ ul {
   width: 100%;
   height: 100%;
   background: rgb(246, 246, 246);
-  animation: loader-container 2800ms 500ms forwards;
+  animation: loader-container 3600ms 300ms forwards;
+  /* COOKING */
 }
 .loader__head {
   width: 100%;
   height: 62px;
   background: white url("../images/logo/ohmyfood@2x.svg") center 20px no-repeat;
   background-size: 162px;
-  opacity: 0.6;
-  animation: loader-head-fadeout 2600ms ease-in-out forwards;
+  opacity: 1;
+  animation: loader-head-fadeout 3200ms ease-in-out forwards;
 }
 @media (min-width: 767px) {
   .loader__head {
@@ -74,8 +73,9 @@ ul {
   width: 100%;
   height: 3px;
   top: 0;
+  margin: 0 auto;
   background: linear-gradient(90deg, #9356DC -40%, #FF79DA 120%);
-  animation: loader-bar-fadeout 800ms 2600ms forwards;
+  animation: loader-fadeout 800ms 2800ms forwards;
 }
 .loader__progress::after {
   content: " ";
@@ -84,8 +84,9 @@ ul {
   width: 100%;
   height: 3px;
   top: 62px;
+  margin: 0 auto;
   background: #f6f6f6;
-  animation: loader-bar 2s 600ms forwards;
+  animation: loader-bar 2800ms 100ms forwards;
   transform-origin: right;
 }
 @media (min-width: 767px) {
@@ -93,7 +94,78 @@ ul {
     top: 68px;
   }
 }
+.loader__cooking {
+  position: absolute;
+  top: 50px;
+  left: calc(50% - 188px);
+  width: 322px;
+  height: 200px;
+  background-color: transparent;
+  animation: loader-fadeout 600ms 3000ms forwards;
+}
+.loader__cooking .bubble {
+  font-family: "Shrikhand", sans-serif;
+  left: auto;
+  font-size: 38px;
+  font-weight: 100;
+  color: #9356DC;
+}
+.loader__cooking .boiling__pan {
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  background: url("../images/loader/pan.svg") center center no-repeat;
+}
+.loader__cooking .boiling__ohmyfood {
+  position: absolute;
+  font-family: "Shrikhand", sans-serif;
+  left: auto;
+  font-size: 22px;
+  font-weight: 100;
+  opacity: 0;
+}
+.loader__cooking .boiling__ohmyfood:nth-child(1) {
+  margin-top: -90px;
+  left: 180px;
+  animation: evaporation 2s cubic-bezier(0.53, 0.16, 0.39, 0.96) infinite;
+}
+.loader__cooking .boiling__ohmyfood:nth-child(2) {
+  margin-top: -84px;
+  left: 160px;
+  animation: evaporation 1.8s ease-in-out 0.035s infinite;
+}
+.loader__cooking .boiling__ohmyfood:nth-child(3) {
+  margin-top: -80px;
+  left: 190px;
+  animation: evaporation 1.4s cubic-bezier(0.53, 0.16, 0.39, 0.96) 0.55s infinite;
+}
+.loader__cooking .boiling__ohmyfood:nth-child(4) {
+  margin-top: -70px;
+  left: 170px;
+  animation: evaporation 1.9s cubic-bezier(0.53, 0.16, 0.39, 0.96) 0.9s infinite;
+}
+.loader__cooking .boiling__ohmyfood:nth-child(5) {
+  margin-top: -90px;
+  left: 180px;
+  animation: evaporation 1.5s cubic-bezier(0.53, 0.16, 0.39, 0.96) infinite;
+}
+.loader__cooking .boiling__ohmyfood:nth-child(6) {
+  margin-top: -75px;
+  left: 150px;
+  animation: evaporation 1.7s ease-in-out 0.035s infinite;
+}
+.loader__cooking .boiling__ohmyfood:nth-child(7) {
+  margin-top: -80px;
+  left: 210px;
+  animation: evaporation 1.6s cubic-bezier(0.53, 0.16, 0.39, 0.96) 0.55s infinite;
+}
+.loader__cooking .boiling__ohmyfood:nth-child(8) {
+  margin-top: -80px;
+  left: 170px;
+  animation: evaporation 2.8s ease-in-out 1.5s infinite;
+}
 
+/* LOADER keyframes */
 @keyframes loader-container {
   80% {
     background: rgb(246, 246, 246);
@@ -109,19 +181,27 @@ ul {
 }
 @keyframes loader-head-fadeout {
   0% {
+    opacity: 0;
+  }
+  20% {
+    filter: blur(5px);
+    opacity: 0;
+  }
+  25% {
     filter: blur(4px);
+    opacity: 0.1;
   }
-  17% {
+  60% {
     filter: blur(2.5px);
+    opacity: 0.4;
   }
-  24% {
-    filter: blur(2px);
-  }
-  46% {
-    filter: blur(1.5px);
+  99% {
+    filter: blur(1px);
+    opacity: 0.7;
   }
   100% {
-    filter: blur(0.3px);
+    filter: blur(0.4px);
+    opacity: 0;
   }
 }
 @keyframes loader-bar {
@@ -144,7 +224,7 @@ ul {
     transform: scaleX(0);
   }
 }
-@keyframes loader-bar-fadeout {
+@keyframes loader-fadeout {
   0% {
     opacity: 1;
   }
@@ -152,19 +232,44 @@ ul {
     opacity: 0;
   }
 }
-/*.page__content{ 
-    overflow-y: hidden;
-    height: 0px;
-    animation: page-appear 2600ms 0s forwards;
+@keyframes evaporation {
+  0% {
+    transform: scale(0.1, 0.1);
+    top: 80%;
+    opacity: 0;
+  }
+  20% {
+    transform: scale(1, 1);
+    top: 70%;
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(2.2, 1.8);
+    top: 20%;
+    opacity: 0;
+  }
 }
+/* NO SCROLL WHILE LOADING !! */
+.page__content {
+  height: 0px;
+  overflow-y: hidden;
+  animation: page-appear 3200ms 0s forwards;
+}
+
 @keyframes page-appear {
-    99% {
-        height: 0px;
-    }
-    100% {
-        height: auto;
-    }
-} */
+  0% {
+    height: 0px;
+    overflow-y: hidden;
+  }
+  99% {
+    height: 0px;
+    overflow-y: hidden;
+  }
+  100% {
+    height: auto;
+    overflow-y: visible;
+  }
+}
 /*** HEADER ***/
 .header {
   position: relative;
@@ -191,7 +296,7 @@ ul {
   left: 0;
   width: 70px;
   height: 100%;
-  animation: animated_arrow-item 500ms 3000ms ease-out backwards;
+  animation: animated_arrow-item 500ms 4000ms ease-out backwards;
 }
 @keyframes animated_arrow-item {
   0% {
@@ -365,13 +470,16 @@ ul {
   counter-increment: li;
 }
 .HowItWorks__list li:nth-child(1) {
-  animation: animated_list-item 400ms 2600ms ease-out backwards;
+  animation: animated_list-item 400ms 3400ms ease-out backwards;
 }
 .HowItWorks__list li:nth-child(2) {
-  animation: animated_list-item 600ms 2700ms ease-in-out backwards;
+  animation: animated_list-item 600ms 3600ms ease-out backwards;
 }
 .HowItWorks__list li:nth-child(3) {
-  animation: animated_list-item 800ms 2800ms ease-out backwards;
+  animation: animated_list-item 800ms 3800ms ease-out backwards;
+}
+.HowItWorks__list li:nth-child(4) {
+  animation: animated_list-item 1000ms 4000ms ease-out backwards;
 }
 @keyframes animated_list-item {
   0% {
@@ -693,13 +801,16 @@ ul {
   flex-flow: column nowrap;
 }
 .menus__choices:nth-child(1) {
-  animation: animated_list-item 400ms 2600ms ease-out backwards;
+  animation: animated_list-item 400ms 3400ms ease-out backwards;
 }
 .menus__choices:nth-child(2) {
-  animation: animated_list-item 600ms 2700ms ease-in-out backwards;
+  animation: animated_list-item 600ms 3600ms ease-out backwards;
 }
 .menus__choices:nth-child(3) {
-  animation: animated_list-item 800ms 2800ms ease-out backwards;
+  animation: animated_list-item 800ms 3800ms ease-out backwards;
+}
+.menus__choices:nth-child(4) {
+  animation: animated_list-item 1000ms 4000ms ease-out backwards;
 }
 @keyframes animated_list-item {
   0% {
@@ -736,13 +847,16 @@ ul {
   overflow: hidden;
 }
 .menus__choices--content .service:nth-child(1) {
-  animation: animated_list-item 400ms 2600ms ease-out backwards;
+  animation: animated_list-item 400ms 3400ms ease-out backwards;
 }
 .menus__choices--content .service:nth-child(2) {
-  animation: animated_list-item 600ms 2700ms ease-in-out backwards;
+  animation: animated_list-item 600ms 3600ms ease-out backwards;
 }
 .menus__choices--content .service:nth-child(3) {
-  animation: animated_list-item 800ms 2800ms ease-out backwards;
+  animation: animated_list-item 800ms 3800ms ease-out backwards;
+}
+.menus__choices--content .service:nth-child(4) {
+  animation: animated_list-item 1000ms 4000ms ease-out backwards;
 }
 @keyframes animated_list-item {
   0% {
