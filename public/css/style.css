@@ -127,42 +127,27 @@ ul {
 .loader__cooking .boiling__ohmyfood:nth-child(1) {
   margin-top: -90px;
   left: 180px;
-  animation: evaporation 2s cubic-bezier(0.53, 0.16, 0.39, 0.96) infinite;
+  animation: evaporation 2s cubic-bezier(0.53, 0.16, 0.39, 0.96) 2;
 }
 .loader__cooking .boiling__ohmyfood:nth-child(2) {
   margin-top: -84px;
   left: 160px;
-  animation: evaporation 1.8s ease-in-out 0.035s infinite;
+  animation: evaporation 1.8s ease-in-out 0.035s 2;
 }
 .loader__cooking .boiling__ohmyfood:nth-child(3) {
   margin-top: -80px;
   left: 190px;
-  animation: evaporation 1.4s cubic-bezier(0.53, 0.16, 0.39, 0.96) 0.55s infinite;
+  animation: evaporation 1.4s cubic-bezier(0.53, 0.16, 0.39, 0.96) 0.55s 2;
 }
 .loader__cooking .boiling__ohmyfood:nth-child(4) {
   margin-top: -70px;
   left: 170px;
-  animation: evaporation 1.9s cubic-bezier(0.53, 0.16, 0.39, 0.96) 0.9s infinite;
+  animation: evaporation 1.6s cubic-bezier(0.53, 0.16, 0.39, 0.96) 0.9s 2;
 }
 .loader__cooking .boiling__ohmyfood:nth-child(5) {
   margin-top: -90px;
   left: 180px;
-  animation: evaporation 1.5s cubic-bezier(0.53, 0.16, 0.39, 0.96) infinite;
-}
-.loader__cooking .boiling__ohmyfood:nth-child(6) {
-  margin-top: -75px;
-  left: 150px;
-  animation: evaporation 1.7s ease-in-out 0.035s infinite;
-}
-.loader__cooking .boiling__ohmyfood:nth-child(7) {
-  margin-top: -80px;
-  left: 210px;
-  animation: evaporation 1.6s cubic-bezier(0.53, 0.16, 0.39, 0.96) 0.55s infinite;
-}
-.loader__cooking .boiling__ohmyfood:nth-child(8) {
-  margin-top: -80px;
-  left: 170px;
-  animation: evaporation 2.8s ease-in-out 1.5s infinite;
+  animation: evaporation 1.5s cubic-bezier(0.53, 0.16, 0.39, 0.96) 2;
 }
 
 /* LOADER keyframes */
