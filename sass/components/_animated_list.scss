@@ -20,7 +20,7 @@
 }
 
 @mixin animated_arrow{
-    animation: animated_arrow-item 500ms 4000ms ease-out backwards;
+    animation: animated_arrow-item 500ms ease-out backwards;
     
     @keyframes animated_arrow-item {
         0% {
