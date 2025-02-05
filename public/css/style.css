@@ -455,16 +455,16 @@ ul {
   counter-increment: li;
 }
 .HowItWorks__list li:nth-child(1) {
-  animation: animated_list-item 400ms 3400ms ease-out backwards;
+  animation: animated_list-item 400ms 200ms ease-out backwards;
 }
 .HowItWorks__list li:nth-child(2) {
-  animation: animated_list-item 600ms 3600ms ease-out backwards;
+  animation: animated_list-item 600ms 400ms ease-out backwards;
 }
 .HowItWorks__list li:nth-child(3) {
-  animation: animated_list-item 800ms 3800ms ease-out backwards;
+  animation: animated_list-item 800ms 600ms ease-out backwards;
 }
 .HowItWorks__list li:nth-child(4) {
-  animation: animated_list-item 1000ms 4000ms ease-out backwards;
+  animation: animated_list-item 1000ms 800ms ease-out backwards;
 }
 @keyframes animated_list-item {
   0% {
@@ -782,16 +782,16 @@ ul {
   flex-flow: column nowrap;
 }
 .menus__choices:nth-child(1) {
-  animation: animated_list-item 400ms 3400ms ease-out backwards;
+  animation: animated_list-item 400ms 200ms ease-out backwards;
 }
 .menus__choices:nth-child(2) {
-  animation: animated_list-item 600ms 3600ms ease-out backwards;
+  animation: animated_list-item 600ms 400ms ease-out backwards;
 }
 .menus__choices:nth-child(3) {
-  animation: animated_list-item 800ms 3800ms ease-out backwards;
+  animation: animated_list-item 800ms 600ms ease-out backwards;
 }
 .menus__choices:nth-child(4) {
-  animation: animated_list-item 1000ms 4000ms ease-out backwards;
+  animation: animated_list-item 1000ms 800ms ease-out backwards;
 }
 @keyframes animated_list-item {
   0% {
@@ -828,16 +828,16 @@ ul {
   overflow: hidden;
 }
 .menus__choices--content .service:nth-child(1) {
-  animation: animated_list-item 400ms 3400ms ease-out backwards;
+  animation: animated_list-item 400ms 200ms ease-out backwards;
 }
 .menus__choices--content .service:nth-child(2) {
-  animation: animated_list-item 600ms 3600ms ease-out backwards;
+  animation: animated_list-item 600ms 400ms ease-out backwards;
 }
 .menus__choices--content .service:nth-child(3) {
-  animation: animated_list-item 800ms 3800ms ease-out backwards;
+  animation: animated_list-item 800ms 600ms ease-out backwards;
 }
 .menus__choices--content .service:nth-child(4) {
-  animation: animated_list-item 1000ms 4000ms ease-out backwards;
+  animation: animated_list-item 1000ms 800ms ease-out backwards;
 }
 @keyframes animated_list-item {
   0% {
@@ -911,11 +911,6 @@ ul {
 .menus__choices--content .service .menu__input:checked ~ .details .menu__box {
   margin-right: 0;
   transition: all 0.3s;
-}
-.menus__choices--content .service .menu__input:checked ~ .details .menu__box--icon {
-  color: #008766;
-  border: 2px solid #008766;
-  transition: all 0.2s ease-in-out;
 }
 .menus__button {
   width: auto;

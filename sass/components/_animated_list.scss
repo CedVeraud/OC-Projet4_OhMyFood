@@ -3,7 +3,7 @@
 
   @for $i from 1 through 4 {
     &:nth-child(#{$i}) {
-        animation: animated_list-item $i*200+200ms $i*200+3200ms ease-out backwards;
+        animation: animated_list-item $i*200+200ms $i*200ms ease-out backwards;
     }
   }
   
